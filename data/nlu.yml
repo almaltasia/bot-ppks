@@ -1,0 +1,438 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - Halo
+    - Hai
+    - p
+    - oi
+    - salam
+    - Yo
+    - Hei
+    - punten
+    - permisi
+    - Selamat pagi
+    - Pagi
+    - Selamat siang
+    - Siang
+    - Selamat sore
+    - Sore
+    - Selamat malam
+    - Malam
+    - Halo, senang bertemu denganmu
+    - Senang bertemu denganmu
+    - Hai, senang bertemu denganmu
+    - Halo, salam kenal
+    - Salam kenal
+    - Hai, salam kenal
+    - Halo, apa kamu di sana?
+    - Apa kamu di sana?
+    - Hai, apa kamu di sana?
+    - Halo, bisa bantu saya?
+    - Bisa bantu saya?
+    - Hai, bisa bantu saya?
+    - Permisi
+    - Permisi, boleh tanya sesuatu?
+    - Maaf mengganggu
+    - Maaf mengganggu, bisa minta tolong?
+    - Halo semua
+    - Hai semua
+    - Selamat datang
+    - Halo, selamat datang
+    - Hai, selamat datang
+    - Hei, gimana nih?
+    - Halo bro!
+    - Hai sis!
+    - Apa kabs?
+    - Halo gan!
+    - Hai gaes!
+    - Halo kawan-kawan!
+    - Oi, apa kabar?
+    - Selamat datang, sobat!
+    - Yoo, ada apa nih?
+    - Hei, lagi apa nih?
+    - Yo, lagi sibuk apa?
+    - Assalamualaikum
+    - Assalamu'alaikum warahmatullahi wabarakatuh
+    - Salam sejahtera
+    - Salamakki!
+    - Salama'!
+    - Tabe'!
+
+- intent: goodbye
+  examples: |
+    - Sampai jumpa
+    - Sampai ketemu lagi
+    - Sampai nanti
+    - Sampai bertemu kembali
+    - Semoga harimu menyenangkan
+    - Semoga harimu indah
+    - Selamat tinggal
+    - Selamat jalan
+    - Dadah
+    - Dadah, sampai jumpa
+    - Bye
+    - Bye bye
+    - Good bye
+    - Goodbye
+    - Selamat beristirahat
+    - Selamat tidur
+    - Sampai esok
+    - Sampai besok
+    - Sampai jumpa besok
+    - Sampai jumpa lagi besok
+    - Terima kasih, sampai jumpa
+    - Terima kasih atas bantuannya, sampai jumpa
+    - Senang bisa ngobrol denganmu, sampai ketemu lagi
+    - Senang bisa berbincang, sampai nanti
+    - Baiklah, sampai jumpa
+    - Oke, sampai nanti
+    - Saya harus pergi sekarang, sampai jumpa
+    - Saya pamit dulu, sampai jumpa lagi
+    - Sudah dulu ya, sampai jumpa
+    - Sudah saatnya saya pergi, sampai nanti
+    - Sampai di sini dulu, terima kasih
+    - Kita lanjutkan lagi nanti, sampai jumpa
+    - Lain kali kita ngobrol lagi, sampai nanti
+    - Kapan-kapan kita sambung lagi, sampai jumpa
+    - Sampai ketemu di lain kesempatan
+    - Sampai berjumpa lagi
+    - Sampai nanti, semoga harimu menyenangkan
+    - Sampai jumpa, semoga sukses selalu
+    - Bye, jaga dirimu baik-baik
+    - Bye, semoga semuanya lancar
+    - Mari kita akhiri sampai di sini, sampai jumpa
+    - Kita sudahi dulu sampai di sini, sampai nanti
+    - Saya harus mengakhiri percakapan ini, sampai jumpa lagi
+    - Saya rasa cukup sampai di sini, terima kasih
+    - Okey, sampai ketemu lagi nanti
+    - Okey, kita lanjutkan lagi nanti
+    - Yuk, kita akhiri dulu, sampai nanti
+    - Yuk, kita sudahi dulu, sampai jumpa
+    - Oke, saya cabut dulu, bye
+    - Oke, saya pamit dulu, sampai ketemu lagi
+    - Saya harus cabut sekarang, sampai nanti
+    - Saya harus pamit sekarang, sampai jumpa lagi
+    - Wassalamualaikum
+    - Wassalamu'alaikum warahmatullahi wabarakatuh
+    - Fi amanillah
+
+- intent: affirm
+  examples: |
+    - Ya
+    - Iya
+    - Yap
+    - Yup
+    - Yes
+    - Ya, benar
+    - Ya, tentu saja
+    - Ya, tentu
+    - Ya, betul
+    - Ya, itu benar
+    - Ya, saya setuju
+    - Ya, saya rasa begitu
+    - Ya, saya yakin
+    - Ya, pasti
+    - Ya, sudah pasti
+    - Ya, jelas
+    - Ya, tepat sekali
+    - Ya, tidak salah lagi
+    - Ya, akurat
+    - Ya, 100%
+    - Ya, absolutly
+    - Ya, definitely
+    - Ya, exactly
+    - Ya, precisely
+    - Iya, benar sekali
+    - Iya, tepat
+    - Iya, betul
+    - Iya, itu benar
+    - Iya, saya setuju
+    - Iya, saya rasa demikian
+    - Iya, sudah pasti
+    - Iya, tentu saja
+    - Iya, pasti
+    - Iya dong
+    - Iya lah
+    - Iya banget
+    - Iya, iya
+    - Yoi
+    - Yoi, bener tuh
+    - Yoi, setuju
+    - Sip
+    - Sip, benar
+    - Sip, itu benar
+    - Sip, tepat sekali
+    - Sip, setuju
+    - Sip, saya setuju
+    - Oke
+    - Oke, benar
+    - Oke, betul
+    - Oke, itu benar
+    - Oke, saya setuju
+    - Baiklah
+    - Baiklah, benar
+    - Baiklah, itu benar
+    - Baiklah, setuju
+    - Betul
+    - Betul sekali
+    - Sangat tepat
+    - Benar
+    - Tentu saja
+    - Tentu
+    - Jelas
+    - Pastinya
+    - Affirmative
+    - Absolutely
+    - Definitely
+    - Exactly
+    - Precisely
+    - Iyo
+    - Iye
+
+- intent: deny
+  examples: |
+    - Tidak
+    - Nggak
+    - Enggak
+    - Tak
+    - Ndak
+    - Nope
+    - No
+    - Bukan
+    - Salah
+    - Keliru
+    - Tidak benar
+    - Tidak tepat
+    - Tidak setuju
+    - Saya tidak setuju
+    - Tidak, itu salah
+    - Tidak, itu tidak benar
+    - Tidak, bukan itu
+    - Tidak, bukan begitu
+    - Sama sekali tidak
+    - Sama sekali bukan
+    - Tentu saja tidak
+    - Jelas tidak
+    - Tidak mungkin
+    - Tidak akan
+    - Tidak pernah
+    - Tidak sama sekali
+    - Tidak ada
+    - Tidak ada sama sekali
+    - Bukan itu
+    - Bukan begitu
+    - Bukan seperti itu
+    - Bukan itu maksudnya
+    - Bukan itu yang saya maksud
+    - Salah, bukan itu
+    - Salah, bukan begitu
+    - Keliru, bukan seperti itu
+    - Tidak betul
+    - Tidak akurat
+    - Tidak tepat sasaran
+    - Tidak sesuai
+    - Tidak relevan
+    - Tidak terkait
+    - Tidak berhubungan
+    - Tidak ada hubungannya
+    - Tidak ada kaitannya
+    - Tidak ada sangkut pautnya
+    - Tidak ada relevansinya
+    - Tidak benar sama sekali
+    - Salah total
+    - Salah kaprah
+    - Salah besar
+    - Keliru besar
+    - Keliru total
+    - Tidak sependapat
+    - Tidak satu pemikiran
+    - Tidak sejalan
+    - Tidak sepaham
+    - Tidak sepemahaman
+    - Anda salah
+    - Itu salah
+    - Itu tidak benar
+    - Itu keliru
+    - Itu tidak tepat
+    - Itu tidak akurat
+    - Maaf, tapi tidak
+    - Maaf, tapi bukan
+    - Maaf, tapi itu salah
+    - Maaf, tapi itu tidak benar
+    - Maaf, tapi Anda keliru
+    - Saya tidak bisa setuju
+    - Saya tidak bisa menyetujui
+    - Saya tidak bisa sependapat
+    - Saya menolak
+    - Saya membantah
+    - Saya tidak terima
+    - Saya keberatan
+    - Saya tidak menerima
+    - Saya tidak bisa menerima
+    - Jangan
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - Apakah kamu bot?
+    - Apakah kamu robot?
+    - Apakah kamu manusia?
+    - Apakah kamu asisten virtual?
+    - Apakah kamu AI?
+    - Apakah kamu chatbot?
+    - Apakah saya sedang berbicara dengan bot?
+    - Apakah saya sedang berbicara dengan robot?
+    - Apakah saya sedang berbicara dengan manusia?
+    - Apakah saya sedang berbicara dengan asisten virtual?
+    - Apakah saya sedang berbicara dengan AI?
+    - Apakah saya sedang berbicara dengan chatbot?
+    - Apakah Anda seorang bot?
+    - Apakah Anda seorang robot?
+    - Apakah Anda seorang manusia?
+    - Apakah Anda seorang asisten virtual?
+    - Apakah Anda seorang AI?
+    - Apakah Anda seorang chatbot?
+    - Kamu ini apa?
+    - Kamu ini siapa?
+    - Kamu ini bot atau manusia?
+    - Kamu ini robot atau manusia?
+    - Kamu ini asisten virtual atau manusia?
+    - Kamu ini AI atau manusia?
+    - Kamu ini chatbot atau manusia?
+    - Saya sedang berbicara dengan siapa?
+    - Saya sedang berbicara dengan apa?
+    - Saya sedang berkomunikasi dengan siapa?
+    - Saya sedang berkomunikasi dengan apa?
+    - Siapakah kamu?
+    - Apakah kamu sadar bahwa kamu adalah sebuah program?
+    - Apakah kamu sadar bahwa kamu adalah sebuah bot?
+    - Apakah kamu sadar bahwa kamu bukanlah manusia?
+    - Kamu ini apa sebenarnya?
+    - Kamu ini makhluk apa?
+    - Kamu ini program apa?
+    - Kamu ini sistem apa?
+    - Kamu ini teknologi apa?
+    - Kamu ini inovasi apa?
+
+- intent: thank_you
+  examples: |
+    - Terima kasih
+    - Terima kasih banyak
+    - Makasih
+    - Makasih banyak
+    - Terimakasih
+    - Thx
+    - Thanks
+    - Thank you
+    - Thanks a lot
+    - Thank you so much
+    - Terima kasih atas bantuannya
+    - Terima kasih atas informasinya
+    - Terima kasih atas sarannya
+    - Terima kasih atas masukannya
+    - Terima kasih atas dukungannya
+    - Terima kasih atas waktunya
+    - Terima kasih atas perhatiannya
+    - Terima kasih atas kesabarannya
+    - Terima kasih atas kebaikannya
+    - Terima kasih atas ketulusannya
+    - Terima kasih atas keramahannya
+    - Terima kasih atas kehangatannya
+    - Terima kasih atas keakrabannya
+    - Terima kasih atas kepeduliannya
+    - Terima kasih atas pengertiannya
+    - Terima kasih atas pemahamannya
+    - Terima kasih atas kerja samanya
+    - Terima kasih atas kerja kerasnya
+    - Terima kasih atas dedikasinya
+    - Terima kasih atas komitmennya
+    - Terima kasih atas kontribusinya
+    - Terima kasih atas partisipasinya
+    - Terima kasih atas keterlibatannya
+    - Terima kasih atas dukungan Anda
+    - Terima kasih atas bantuan Anda
+    - Terima kasih atas saran Anda
+    - Terima kasih atas masukan Anda
+    - Terima kasih atas waktu Anda
+    - Terima kasih atas perhatian Anda
+    - Terima kasih atas kesabaran Anda
+    - Terima kasih atas kebaikan Anda
+    - Terima kasih atas ketulusan Anda
+    - Terima kasih atas kepedulian Anda
+    - Terima kasih atas pengertian Anda
+    - Terima kasih atas pemahaman Anda
+    - Terima kasih atas kerja sama Anda
+    - Terima kasih atas kerja keras Anda
+    - Terima kasih atas dedikasi Anda
+    - Terima kasih atas komitmen Anda
+    - Terima kasih atas kontribusi Anda
+    - Terima kasih atas partisipasi Anda
+    - Terima kasih atas keterlibatan Anda
+    - Saya sangat berterima kasih
+    - Saya sangat menghargai bantuannya
+    - Saya sangat menghargai informasinya
+    - Saya sangat menghargai sarannya
+    - Saya sangat menghargai masukannya
+    - Saya sangat menghargai dukungannya
+    - Saya sangat menghargai waktunya
+    - Saya sangat menghargai perhatiannya
+    - Saya sangat menghargai kesabarannya
+    - Saya sangat menghargai kebaikannya
+    - Saya sangat menghargai ketulusannya
+    - Saya sangat menghargai keramahannya
+    - Saya sangat menghargai kehangatannya
+    - Saya sangat menghargai keakrabannya
+    - Saya sangat menghargai kepeduliannya
+    - Saya sangat menghargai pengertiannya
+    - Saya sangat menghargai pemahamannya
+    - Saya sangat menghargai kerja samanya
+    - Saya sangat menghargai kerja kerasnya
+    - Saya sangat menghargai dedikasinya
+    - Saya sangat menghargai komitmennya
+    - Saya sangat menghargai kontribusinya
+    - Saya sangat menghargai partisipasinya
+    - Saya sangat menghargai keterlibatannya
+    - Saya sangat bersyukur atas bantuannya
+    - Saya sangat bersyukur atas informasinya
+    - Saya sangat bersyukur atas sarannya
+    - Saya sangat bersyukur atas masukannya
+    - Saya sangat bersyukur atas dukungannya
+    - Saya sangat bersyukur atas waktunya
+    - Saya sangat bersyukur atas perhatiannya
+    - Saya sangat bersyukur atas kesabarannya
+    - Saya sangat bersyukur atas kepeduliannya
+    - Saya sangat bersyukur atas pengertiannya
+    - Saya sangat bersyukur atas pemahamannya
+    - Saya sangat bersyukur atas kerja samanya
+    - Terima kasih banyak, ini sangat membantu
+    - Terima kasih banyak, saya sangat menghargainya
+    - Terima kasih banyak, saya sangat bersyukur
+    - Terima kasih banyak, Anda telah sangat membantu
+    - Terima kasih banyak, saya sangat terkesan
+    - Tarima kasi'
+    - Tarima kasi' sare
+    - Anne tarima kasina
+    - Anne tarima kasitta
+    - Tarima kasi' atas bantuana
+    - Tarima kasi' atas wattunna
+    - Tarima kasi' atas perhatiana
+    - Tarima kasi' atas kesabarana
+    - Terima kasih banyak, ini sangat bagus
+    - Terima kasih banyak, ini luar biasa
+    - Terima kasih banyak, saya sangat senang
+    - Terima kasih banyak, saya sangat puas
+    - Terima kasih banyak, saya tidak bisa mengungkapkannya dengan kata-kata
+    - Tarima kasi'nah
+    - okey, terima kasih yaa
+    - terima kasih nah
+    - makasih nah
+    - matur
+    - suwun
+    - matur nuhun
+
+    
