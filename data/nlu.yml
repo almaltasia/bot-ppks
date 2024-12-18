@@ -435,4 +435,58 @@ nlu:
     - suwun
     - matur nuhun
 
-    
+- intent: ask_faq
+  examples: |
+    - apa yang dimaksud dengan [kekerasan seksual](topic)
+    - siapa saja yang mendapat [perlindungan](topic) dalam Permendikbud
+    - jelaskan [prinsip pencegahan dan penanganan](topic)
+    - tolong jelaskan tentang [kekerasan seksual](topic)
+    - apa itu [klasifikasi bentuk kekerasan seksual](topic)
+    - jelaskan tentang [kekerasan verbal](topic)
+    - bagaimana [kekerasan melalui teknologi informasi](topic)
+    - apa saja [bentuk kekerasan fisik](topic)
+    - kapan [persetujuan korban tidak sah](topic)
+    - jelaskan tentang [pencegahan kekerasan seksual](topic)
+    - bagaimana [pencegahan oleh pendidik](topic)
+    - apa saja [upaya pencegahan mahasiswa](topic)
+    - jelaskan [kewajiban pencegahan perguruan tinggi](topic)
+    - bagaimana [pencegahan dalam pembelajaran](topic)
+    - jelaskan tentang [penanganan kekerasan seksual](topic)
+    - apa saja [bentuk penanganan perguruan tinggi](topic)
+    - bagaimana [pendampingan korban](topic)
+    - jelaskan [perlindungan korban](topic)
+    - apa saja [sanksi administratif](topic)
+    - bagaimana [proses pemulihan](topic)
+    - bagaimana [cara melaporkan](topic) kasus
+    - jelaskan [prosedur pelaporan](topic)
+    - bagaimana [menjaga kerahasiaan pelapor](topic)
+    - jelaskan [proses tindak lanjut laporan](topic)
+    - jelaskan tentang [Satuan Tugas](topic)
+    - apa [tugas Satgas](topic)
+    - apa [wewenang Satgas](topic)
+    - apa saja [hak korban](topic)
+    - jelaskan [perlindungan untuk mahasiswa](topic)
+    - bagaimana [perlindungan pendidik](topic)
+    - jelaskan [perlindungan penyandang disabilitas](topic)
+    - apa [hak saksi](topic)
+    - jelaskan [perlindungan saksi](topic)
+
+- lookup: topic
+  examples: |
+    - kekerasan seksual
+    - perlindungan
+    - prinsip pencegahan
+    - klasifikasi kekerasan
+    - kekerasan verbal
+    - kekerasan online
+    - kekerasan fisik
+    - persetujuan korban
+    - pencegahan
+    - penanganan
+    - pendampingan
+    - pemulihan
+    - sanksi
+    - pelaporan
+    - Satuan Tugas
+    - hak korban
+    - perlindungan saksi
