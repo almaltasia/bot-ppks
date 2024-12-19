@@ -13,5 +13,10 @@ rules:
 
   - rule: Say thanks anytime the user says thank
     steps:
-      - intent: thank
+      - intent: thank_you
       - action: utter_thanks
+
+  - rule : answer to FAQ 
+    steps:
+      - intent: ask_faq
+      - action: action_faq

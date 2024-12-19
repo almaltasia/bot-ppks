@@ -7,6 +7,26 @@ intents:
   - deny
   - bot_challenge
   - thank_you
+  - ask_faq
+
+entities:
+  - category
+  - topic
+
+slots:
+  category:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: category
+
+  topic:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: topic
 
 responses:
   utter_greet:
@@ -37,6 +57,8 @@ responses:
   utter_default:
     - text: "Maaf, saya masih belum mengerti apa yang Anda maksud. Silakan tuliskan kembali pertanyaan Anda"
 
+actions:
+  - action_faq
 
 session_config:
   session_expiration_time: 60
