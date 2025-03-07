@@ -5,29 +5,60 @@ intents:
   - goodbye
   - affirm
   - deny
-  - mood_great
-  - mood_unhappy
   - bot_challenge
+  - thank_you
+  - ask_faq
+
+entities:
+  - category
+  - topic
+
+slots:
+  category:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: category
+
+  topic:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: topic
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
+    - text: "Halo! 👋 Selamat datang di Layanan Satgas PPKS PNUP. Saya adalah asisten virtual 🤖, yang siap membantu Anda terkait pencegahan dan penanganan kekerasan seksual. Bagaimana saya bisa membantu?"
+    - text: "Selamat datang! 👋 Saya adalah asisten virtual 🤖 Satgas PPKS PNUP yang siap memberikan informasi seputar pencegahan dan penanganan kekerasan seksual, serta menerima laporan kasus jika Anda membutuhkan. Apa yang bisa saya bantu?"
+    - text: "Hai! 👋 Terima kasih telah menghubungi Layanan Satgas PPKS PNUP. Saya di sini untuk membantu memberikan informasi seputar pencegahan dan penanganan kekerasan seksual, serta menerima laporan kasus jika Anda membutuhkan. Silakan ceritakan apa yang bisa saya bantu."
+    - text: "Selamat datang di layanan Satgas PPKS PNUP. Kami menghargai kepercayaanmu untuk menghubungi kami.Bagaimana kami bisa membantumu hari ini?"
 
   utter_goodbye:
-  - text: "Bye"
+    - text: "Terima kasih telah menghubungi Satgas PPKS PNUP. Jika butuh bantuan lagi, kami selalu siap 24/7. Jaga diri baik-baik! 👋"
+    - text: "Sampai jumpa! Satgas PPKS PNUP selalu siap membantu kapanpun Anda membutuhkan. Untuk situasi darurat, hubungi hotline kami di 081355060444. 🆘"
+    - text: "Terima kasih atas kepercayaan Anda kepada Satgas PPKS PNUP. Tetap kuat dan jangan ragu untuk kembali jika membutuhkan bantuan atau informasi. 💪"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+    - text: "Saya adalah Asisten virtual dari Satgas PPKS PNUP 🤖, dirancang untuk membantu memberikan informasi seputar pencegahan dan penanganan kekerasan seksual, serta menerima laporan kasus. Meski saya AI, semua percakapan akan dijaga kerahasiaannya."
+    - text: "Perkenalkan, saya Asisten virtual Satgas PPKS PNUP 🤖. Saya akan membantu Anda dengan informasi seputar pencegahan dan penanganan kekerasan seksual, serta menerima laporan kasus jika Anda membutuhkan. Kerahasiaan Anda adalah prioritas kami."
+
+  utter_thanks:
+    - text: "Sama-sama! Senang bisa membantu. Jangan ragu menghubungi SATGAS PPKS PNUP kembali jika membutuhkan bantuan lain. 🙂"
+    - text: "Terima kasih kembali. SATGAS PPKS PNUP selalu siap membantu. Jika ada hal lain yang ingin didiskusikan, silakan hubungi kami kembali. 🤝"
+    - text: "Dengan senang hati! 😊 Ingat, Anda tidak sendiri. SATGAS PPKS PNUP siap mendukung kapanpun Anda membutuhkan bantuan."
+
+  utter_please_rephrase:
+    - text: "Mohon maaf atas keterbatasan saya dalam memahami pesan Anda. Silakan jelaskan kembali kebutuhan Anda, saya akan berusaha membantu sebaik mungkin."
+    - text: "Maaf, saya kurang memahami maksud Anda. Bisakah Anda menjelaskan kembali dengan lebih sederhana tentang informasi atau bantuan yang Anda butuhkan?"
+    - text: "Mohon maaf atas keterbatasan pemahaman saya. Silakan tuliskan kembali pertanyaan Anda, saya akan berusaha memberikan bantuan yang terbaik."
+
+  utter_default:
+    - text: "Maaf, saya masih belum mengerti apa yang Anda maksud. Silakan tuliskan kembali pertanyaan Anda"
+
+actions:
+  - action_faq
 
 session_config:
   session_expiration_time: 60

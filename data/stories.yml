@@ -1,30 +1,87 @@
 version: "3.1"
 
 stories:
+  - story: say thanks
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: thank_you
+      - action: utter_thanks
+      - intent: goodbye
+      - action: utter_goodbye
 
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+  - story: FAQ dengan pertanyaan lanjutan
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_faq
+        entities:
+          - category: "informasi umum"
+          - topic: "kekerasan seksual"
+      - action: action_faq
+      - intent: ask_faq
+        entities:
+          - category: "bentuk kekerasan"
+      - action: action_faq
 
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - story: FAQ tentang bentuk kekerasan
+    steps:
+      - intent: ask_faq
+        entities:
+          - category: "bentuk kekerasan"
+      - action: action_faq
+      - intent: ask_faq
+        entities:
+          - topic: "kekerasan verbal"
+      - action: action_faq
+      - intent: thank_you
+      - action: utter_thanks
 
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - story: FAQ tentang pencegahan dan pelaporan
+    steps:
+      - intent: ask_faq
+        entities:
+          - category: "pencegahan"
+      - action: action_faq
+      - intent: ask_faq
+        entities:
+          - category: "tata cara pelaporan"
+      - action: action_faq
+
+  - story: FAQ dengan klarifikasi kategori
+    steps:
+      - intent: ask_faq
+        entities:
+          - topic: "kekerasan seksual"
+      - action: action_faq
+      - intent: ask_faq
+        entities:
+          - category: "informasi umum"
+          - topic: "kekerasan seksual"
+      - action: action_faq
+
+  - story: FAQ tentang hak dan perlindungan
+    steps:
+      - intent: ask_faq
+        entities:
+          - category: "hak dan perlindungan"
+      - action: action_faq
+      - intent: ask_faq
+        entities:
+          - topic: "perlindungan mahasiswa"
+      - action: action_faq
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: FAQ tentang Satuan Tugas
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_faq
+        entities:
+          - category: "satuan tugas"
+      - action: action_faq
+      - intent: ask_faq
+        entities:
+          - topic: "tugas dan wewenang"
+      - action: action_faq
