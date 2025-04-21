@@ -20,3 +20,76 @@ rules:
     steps:
       - intent: ask_faq
       - action: action_faq
+  
+  # 1a. Aturan untuk menangani intent report_case
+  - rule: Respon terhadap keinginan melapor
+    steps:
+      - intent: report_case
+      - action: utter_ask_report_case
+      - action: action_listen
+  
+  # 1b. Aturan untuk memulai form setelah konfirmasi
+  - rule: Mulai form pelaporan setelah konfirmasi
+    steps:
+      - intent: affirm
+      - action: utter_start_report_form
+      - action: report_case_form
+      - active_loop: report_case_form
+
+  # 2. Pengguna menolak melanjutkan proses pelaporan
+  - rule: Tolak pelaporan saat ditanya
+    steps:
+      - intent: deny
+      - action: utter_goodbye
+
+  # 3. Menyelesaikan form ketika semua slot terisi
+  - rule: Submit form pelaporan kasus
+    condition:
+      - active_loop: report_case_form
+    steps:
+      - action: report_case_form
+      - active_loop: null
+      - slot_was_set:
+          - requested_slot: null
+      - action: utter_confirm_report
+      - action: action_listen
+
+  # 4. Konfirmasi dan simpan data
+  - rule: Konfirmasi dan simpan laporan
+    steps:
+      - intent: affirm
+      - action: action_submit_report
+      - action: utter_submit_report
+
+  # 5. Pengguna menolak konfirmasi - kembali ke form
+  - rule: Ubah data pelaporan setelah konfirmasi
+    steps:
+      - intent: deny
+      - action: report_case_form
+      - active_loop: report_case_form
+
+  # 6. Pengguna bertanya tentang status laporan
+  # - rule: Pengguna ingin info tentang laporan
+  #   steps:
+  #     - intent: ask_report_status
+  #     - action: action_report_status
+      
+  # 7. Batalkan dengan ucapan selamat tinggal kapan saja selama form aktif
+  - rule: Batalkan form dengan goodbye
+    condition:
+      - active_loop: report_case_form
+    steps:
+      - intent: goodbye
+      - action: action_deactivate_loop
+      - active_loop: null
+      - action: utter_report_cancelled
+
+  # 8. Batalkan dengan perintah batal kapan saja selama form aktif
+  - rule: Batalkan form dengan kata batal
+    condition:
+      - active_loop: report_case_form
+    steps:
+      - intent: deny
+      - action: action_deactivate_loop
+      - active_loop: null
+      - action: utter_report_cancelled

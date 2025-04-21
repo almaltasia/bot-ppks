@@ -513,6 +513,183 @@ nlu:
       - apa saja [perlindungan untuk saksi](topic)
       - jelaskan [hak dan perlindungan saksi](topic)
 
+  - intent: report_case
+    examples: |
+      - Saya ingin melaporkan kasus
+      - Saya mau lapor kejadian
+      - Bagaimana cara melaporkan kejadian
+      - Saya mengalami kekerasan seksual dan ingin melapor
+      - Saya ingin membuat laporan
+      - Saya mau melapor
+      - Tolong saya ingin melaporkan kejadian yang saya alami
+      - Cara membuat laporan kasus
+      - Saya korban kekerasan dan ingin melapor
+      - Ingin melaporkan pelecehan
+      - Ingin melaporkan kekerasan
+      - Saya menjadi korban dan ingin melapor
+      - Saya menyaksikan kejadian dan ingin melapor
+      - Bagaimana saya bisa melapor
+      - Proses pelaporan kasus
+      - Bagaimana cara lapor
+      - Saya ingin lapor
+      - Tolong bantu saya lapor
+      - Saya butuh melapor kejadian
+      - Cara melapor ke satgas
+      - Lapor kasus pelecehan
+      - Lapor kasus kekerasan
+      - Saya ingin melaporkan tindakan tidak menyenangkan
+      - Mau lapor insiden
+      - Saya hendak melaporkan peristiwa
+      - Saya perlu melaporkan kasus yang terjadi
+      - Bagaimana prosedur pelaporan
+      - Saya perlu bantuan untuk melapor
+      - Saya ingin melaporkan perilaku tidak pantas
+      - Bagaimana cara melapor kasus kekerasan seksual
+      - Saya mengalami pelecehan
+      - Saya melihat teman saya dilecehkan
+      - Saya perlu melaporkan tindakan kekerasan
+      - Cara melaporkan kejadian pelecehan
+      - Saya mau buat pengaduan
+      - Bagaimana cara mengadukan kasus
+      - Saya ingin lapor kasus pelecehan
+      - Saya mau melaporkan tindakan tidak menyenangkan
+      - Saya korban kekerasan seksual
+      - Saya menyaksikan kekerasan seksual
+      - Bagaimana prosedur pengaduan
+      - Saya mau melaporkan dosen yang melecehkan
+      - Saya ingin melaporkan teman yang melakukan pelecehan
+      - Saya butuh bantuan untuk lapor kasus
+      - Saya mau melaporkan kejadian yang saya alami
+      - Saya mau mendokumentasikan kejadian kekerasan
+      - Cara membuat laporan pelecehan
+      - Saya ingin mengadukan seseorang
+      - Saya perlu bantuan untuk kasus kekerasan
+      - Prosedur pelaporan kekerasan seksual
+      - Saya adalah korban dan ingin melapor
+      - lapor kasus
+      - mau lapor
+      - mau melapor
+      - mau lapor kasus
+      - mau lapor kejadian
+
+  - intent: inform
+    examples: |
+      - Saya [korban](pelapor_kategori)
+      - Saya [saksi](pelapor_kategori)
+      - Saya sebagai [korban](pelapor_kategori)
+      - Saya adalah [saksi](pelapor_kategori) dari kejadian tersebut
+      - Saya yang menjadi [korban](pelapor_kategori) dalam kasus ini
+      - Saya menyaksikan kejadian itu sebagai [saksi](pelapor_kategori)
+      - Yang jadi [korban](pelapor_kategori) adalah saya sendiri
+      - Saya melihat langsung sebagai [saksi](pelapor_kategori)
+      - Nama saya [Budi Santoso](nama_pelapor)
+      - Nama lengkap saya [Ahmad Rizki](nama_pelapor)
+      - Saya bernama [Siti Nurhaliza](nama_pelapor)
+      - Nama saya [Muhammad Faisal](nama_pelapor)
+      - Panggil saja saya [Anisa](nama_pelapor)
+      - Nama lengkap [Putri Wulandari](nama_pelapor)
+      - Saya [Dimas Prayogo](nama_pelapor)
+      - Lengkapnya [Sri Wahyuni](nama_pelapor)
+      - Saya dipanggil [Rini](nama_pelapor)
+      - Nama saya [Andi Firmansyah](nama_pelapor)
+      - [Nurul Hidayah](nama_pelapor)
+      - [Ahmad Syafiq](nama_pelapor)
+      - [Ratna Dewi](nama_pelapor)
+      - [Muhammad Arif Wicaksono](nama_pelapor)
+      - [Sari Indah Permata](nama_pelapor)
+      - [Teknik Informatika](program_studi)
+      - [Akuntansi](program_studi)
+      - Program studi [Manajemen](program_studi)
+      - Jurusan [Teknik Elektro](program_studi)
+      - Saya dari [Teknik Sipil](program_studi)
+      - Jurusan saya [Sistem Informasi](program_studi)
+      - [Pendidikan Bahasa Inggris](program_studi)
+      - Dari [Ilmu Komunikasi](program_studi)
+      - Program studi saya [Desain Komunikasi Visual](program_studi)
+      - [2B](kelas)
+      - Kelas [3A](kelas)
+      - Saya kelas [4C](kelas)
+      - Dari kelas [1D](kelas)
+      - [5B malam](kelas)
+      - Kelas [2 reguler](kelas)
+      - [Semester 4](kelas)
+      - [Tingkat akhir](kelas)
+      - [Laki-laki](jenis_kelamin)
+      - [Perempuan](jenis_kelamin)
+      - Saya [laki-laki](jenis_kelamin)
+      - Jenis kelamin saya [perempuan](jenis_kelamin)
+      - [Pria](jenis_kelamin)
+      - [Wanita](jenis_kelamin)
+      - Saya seorang [pria](jenis_kelamin)
+      - Saya [wanita](jenis_kelamin)
+      - Nomor HP saya [081234567890](nomor_telepon)
+      - [08579876543](nomor_telepon)
+      - Telepon saya [0812-3456-7890](nomor_telepon)
+      - WA saya [+62857-9876-5432](nomor_telepon)
+      - Bisa dihubungi di [0899 8765 4321](nomor_telepon)
+      - Nomor saya [08123456789](nomor_telepon)
+      - Kontak saya [0878 8765 4321](nomor_telepon)
+      - Hubungi saja ke [081312345678](nomor_telepon)
+      - Alamat saya [Jalan Merdeka No. 123, Makassar](alamat)
+      - [Perumahan Griya Indah Blok C2 No 15, Gowa](alamat)
+      - Saya tinggal di [Jl. Perintis Kemerdekaan Km 10, Makassar](alamat)
+      - Rumah saya di [Kompleks BTN Antara, Blok D/12, Maros](alamat)
+      - [Jl. Hertasning Baru No. 27, Makassar](alamat)
+      - Tinggal di [Asrama Mahasiswa PNUP](alamat)
+      - Domisili di [Jalan Sultan Alauddin No. 89, Makassar](alamat)
+      - Email saya [example@gmail.com](email)
+      - [mahasiswa@pnup.ac.id](email)
+      - Email [budisantoso@gmail.com](email)
+      - Surel saya [sitinur@yahoo.com](email)
+      - [dimas_prasetyo@outlook.com](email)
+      - Email saya adalah [putriayu@student.pnup.ac.id](email)
+      - Alamat email [andi.firmansyah@gmail.com](email)
+      - Jenis kekerasan yang dialami adalah [pelecehan verbal](jenis_kekerasan)
+      - [pelecehan fisik](jenis_kekerasan)
+      - [kekerasan online](jenis_kekerasan)
+      - Kasusnya berupa [pelecehan seksual](jenis_kekerasan)
+      - Saya mengalami [perundungan seksual](jenis_kekerasan)
+      - Berupa [intimidasi seksual](jenis_kekerasan)
+      - [Kekerasan berbasis gender](jenis_kekerasan)
+      - Bentuknya [pelecehan di media sosial](jenis_kekerasan)
+      - [Eksploitasi seksual](jenis_kekerasan)
+      - Kejadiannya [terjadi pada tanggal 10 April 2025 sekitar pukul 14.30 di Ruang 302 Gedung Teknik saat jam kuliah. Pelaku melakukan sentuhan tidak pantas di bahu dan pinggang saya ketika sedang memberikan penjelasan tugas](deskripsi_kejadian)
+      - [Kejadian terjadi selama 3 minggu terakhir di grup chat mata kuliah Pemrograman. Pelaku (koordinator kelas) sering membuat komentar tidak pantas tentang penampilan saya saat saya berbicara di kelas online pada hari Senin dan Rabu pukul 09.00-10.40](deskripsi_kejadian)
+      - [Pada Jumat, 15 April 2025 sekitar pukul 16.00 di lorong lantai 2 gedung Administrasi, saya melihat seorang mahasiswa dilecehkan secara verbal oleh sekelompok mahasiswa lain. Mereka membuat komentar merendahkan tentang tubuh korban](deskripsi_kejadian)
+      - [Kejadian berlangsung selama semester ini (Februari-April 2025) di laboratorium komputer lantai 3. Pelaku sering mencari alasan untuk duduk sangat dekat dan menyentuh tangan saya saat mengajar cara menggunakan perangkat lunak. Ini terjadi setiap praktikum hari Selasa jam 13.00-15.00](deskripsi_kejadian)
+      - [Saya mendapatkan pesan-pesan tidak pantas berisi komentar tentang tubuh saya melalui Instagram pada tanggal 12 April 2025. Pesan dikirim dari akun yang menggunakan nama kampus kita. Saya memiliki screenshot dari pesan-pesan tersebut](deskripsi_kejadian)
+      - [Tanggal 5 April 2025 setelah kegiatan rapat organisasi sekitar pukul 19.30, saya ditawarkan tumpangan pulang oleh pelaku. Dalam perjalanan pulang, pelaku mencoba menyentuh bagian tubuh saya tanpa izin](deskripsi_kejadian)
+      - Pelakunya adalah [dosen](status_terlapor)
+      - Pelakunya [mahasiswa](status_terlapor)
+      - [staf](status_terlapor) kampus
+      - [warga kampus](status_terlapor) lain
+      - Dia [masyarakat umum](status_terlapor)
+      - Pelaku adalah [dosen](status_terlapor) dari jurusan lain
+      - Yang melakukan adalah [mahasiswa](status_terlapor) tingkat akhir
+      - Dia seorang [staf administrasi](status_terlapor)
+      - Pelakunya dari [masyarakat umum](status_terlapor) yang datang ke kampus
+      - Orang tersebut [dosen](status_terlapor) pengampu mata kuliah
+      - Alasan saya melapor karena [saya seorang korban yang memerlukan bantuan pemulihan](alasan_pengaduan)
+      - [saya ingin perguruan tinggi menindak tegas terlapor](alasan_pengaduan)
+      - [saya seorang saksi yang khawatir dengan keadaan korban](alasan_pengaduan)
+      - [saya ingin satuan tugas PPKS mendokumentasikan kejadiannya](alasan_pengaduan)
+      - [saya takut pelaku akan melakukan tindakan serupa pada orang lain](alasan_pengaduan_lainnya)
+      - [saya ingin mencegah hal ini terjadi pada mahasiswa lain](alasan_pengaduan_lainnya)
+      - [saya merasa kampus tidak aman tanpa adanya tindakan](alasan_pengaduan_lainnya)
+      - [korban sangat terpukul dan membutuhkan dukungan](alasan_pengaduan_lainnya)
+      - [saya ingin ada perubahan sistem di kampus untuk mencegah kejadian serupa](alasan_pengaduan_lainnya)
+      - [saya ingin pelaku mendapatkan sanksi](alasan_pengaduan_lainnya)
+      - Kontak konfirmasi [081234567890](kontak_konfirmasi)
+      - Nomor yang bisa dikonfirmasi [0823-4567-8901](kontak_konfirmasi)
+      - Bisa hubungi teman saya di [sarah.amalia@gmail.com](kontak_konfirmasi)
+      - Kontak alternatif [085612345678](kontak_konfirmasi)
+      - Email untuk konfirmasi [ketua_kelas@gmail.com](kontak_konfirmasi)
+      - Teman saya bisa dihubungi di [08234567890](kontak_konfirmasi)
+      - Untuk konfirmasi bisa ke [dosen.pembimbing@pnup.ac.id](kontak_konfirmasi)
+      - [08567890123](kontak_konfirmasi)
+      - Saksi bisa dihubungi di [wahyu.saksi@gmail.com](kontak_konfirmasi)
+      - Kontak koordinator kelas [+62812-3456-7890](kontak_konfirmasi)
+
   - lookup: category
     examples: |
       - informasi umum
