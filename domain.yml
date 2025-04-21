@@ -8,10 +8,27 @@ intents:
   - bot_challenge
   - thank_you
   - ask_faq
+  - report_case
+  - inform
 
 entities:
   - category
   - topic
+  - pelapor_kategori
+  - nama_pelapor
+  - program_studi
+  - kelas
+  - jenis_kelamin
+  - nomor_telepon
+  - alamat
+  - email
+  - jenis_disabilitas
+  - jenis_kekerasan
+  - deskripsi_kekerasan
+  - status_terlapor
+  - alasan_pengaduan
+  - alasan_pengaduan_lainnya
+  - kontak_konfirmasi
 
 slots:
   category:
@@ -27,6 +44,153 @@ slots:
     mappings:
       - type: from_entity
         entity: topic
+
+  pelapor_kategori:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: pelapor_kategori
+
+  nama_pelapor:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: nama_pelapor
+
+  program_studi:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: program_studi
+
+  kelas:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: kelas
+
+  jenis_kelamin:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: jenis_kelamin
+
+  nomor_telepon:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: nomor_telepon
+
+  alamat:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: alamat
+
+  email:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: email
+
+  is_disabilitas:
+    type: bool
+    influence_conversation: false
+    mappings:
+      - type: from_intent
+        intent: affirm
+        value: true
+      - type: from_intent
+        intent: deny
+        value: false
+
+  jenis_disabilitas:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: jenis_disabilitas
+
+  jenis_kekerasan:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: jenis_kekerasan
+
+  deskripsi_kejadian:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: deskripsi_kekerasan
+
+  status_terlapor:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: status_terlapor
+
+  alasan_pengaduan:
+    type: list
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: alasan_pengaduan
+
+  alasan_pengaduan_lainnya:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: alasan_pengaduan_lainnya
+
+  kontak_konfirmasi:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: kontak_konfirmasi
+
+  nomor_referensi:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: nomor_referensi
+
+  requested_slot:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+forms:
+  report_case_form:
+    required_slots:
+      - pelapor_kategori
+      - nama_pelapor
+      - program_studi
+      - kelas
+      - jenis_kelamin
+      - nomor_telepon
+      - alamat
+      - email
+      - is_disabilitas
+      - jenis_kekerasan
+      - deskripsi_kejadian
+      - status_terlapor
+      - alasan_pengaduan
+      - kontak_konfirmasi
 
 responses:
   utter_greet:
@@ -57,8 +221,88 @@ responses:
   utter_default:
     - text: "Maaf, saya masih belum mengerti apa yang Anda maksud. Silakan tuliskan kembali pertanyaan Anda"
 
+  # FAQ Responses
+  utter_ask_report_case:
+    - text: "Saya mengerti Anda ingin melaporkan kasus. Pelaporan ini akan membantu kami mendokumentasikan kasus dan memberikan dukungan yang sesuai. Semua informasi akan dijaga kerahasiaannya. Apakah Anda siap untuk melanjutkan proses pelaporan?"
+  utter_start_report_form:
+    - text: "Saya akan memandu Anda melalui proses pelaporan. Anda dapat menghentikan proses ini kapan saja dengan mengetik 'batal'. Mari kita mulai dengan beberapa pertanyaan untuk mengetahui situasi Anda lebih baik."
+
+  utter_ask_reporter_category:
+    - text: "Terima kasih atas keberanian Anda. Untuk memulai, mohon beritahu kami apakah Anda adalah korban langsung atau saksi dari kejadian tersebut?"
+
+  utter_ask_nama_pelapor:
+    - text: "Boleh saya tahu nama lengkap Anda? Informasi ini akan dijaga kerahasiaannya dan hanya diakses oleh tim yang berwenang."
+
+  utter_ask_program_studi:
+    - text: "Terima kasih. Dari program studi apa Anda berasal?"
+
+  utter_ask_kelas:
+    - text: "Boleh tahu kelas Anda saat ini?"
+
+  utter_ask_jenis_kelamin:
+    - text: "Mohon beritahu jenis kelamin Anda untuk keperluan pendataan."
+
+  utter_ask_nomor_telepon:
+    - text: "Boleh saya minta nomor telepon atau WhatsApp yang dapat dihubungi? Ini akan membantu jika tim kami perlu menghubungi Anda untuk informasi lebih lanjut."
+
+  utter_ask_alamat:
+    - text: "Mohon berikan alamat tempat tinggal Anda saat ini."
+
+  utter_ask_email:
+    - text: "Boleh saya tahu alamat email Anda untuk keperluan komunikasi lanjutan?"
+
+  utter_ask_is_disabilitas:
+    - text: "Apakah Anda penyandang disabilitas? (Ya/Tidak)"
+
+  utter_ask_jenis_disabilitas:
+    - text: "Boleh beritahu apa jenis disabilitas yang Anda miliki? Informasi ini penting agar kami dapat memberikan pendampingan yang sesuai."
+
+  utter_ask_jenis_kekerasan:
+    - text: "Jenis kekerasan seksual apa yang Anda alami atau saksikan? Misalnya pelecehan verbal, pelecehan fisik, kekerasan online, dll."
+
+  utter_ask_deskripsi_kejadian:
+    - text: "Mohon ceritakan secara singkat kejadian yang Anda alami atau saksikan. Jika memungkinkan, sertakan informasi waktu (tanggal dan jam) serta tempat kejadian. Anda tidak perlu memberikan detail yang membuat Anda tidak nyaman. Ceritakan saja sebatas yang Anda rasa perlu."
+
+  utter_ask_status_terlapor:
+    - text: "Apa status dari orang yang dilaporkan? Apakah dia mahasiswa, dosen, staf/pegawai, warga kampus, atau masyarakat umum?"
+
+  utter_ask_alasan_pengaduan_lainnya:
+    - text: "Mohon jelaskan alasan lain Anda melaporkan kejadian ini."
+
+  utter_ask_kontak_konfirmasi:
+    - text: "Mohon berikan nomor telepon atau alamat email pihak lain yang dapat kami hubungi untuk konfirmasi jika diperlukan."
+
+  utter_ask_alasan_pengaduan:
+    - text: "Apa alasan Anda melaporkan kejadian ini? Anda dapat memilih lebih dari satu:\n- Saya seorang saksi yang khawatir dengan keadaan korban.\n- Saya seorang korban yang memerlukan bantuan pemulihan.\n- Saya ingin perguruan tinggi menindak tegas terlapor.\n- Saya ingin satuan tugas PPKS mendokumentasikan kejadiannya, meningkatkan keamanan perguruan tinggi dari kekerasan seksual, dan memberi perlindungan bagi saya.\n- Lainnya (mohon dijelaskan)"
+
+  utter_submit_report:
+    - text: "Terima kasih atas keberanian dan kepercayaan Anda. Laporan Anda telah berhasil disimpan dengan nomor referensi: {nomor_referensi}. Tim Satgas PPKS akan meninjau laporan Anda segera. Jika diperlukan, kami akan menghubungi Anda melalui kontak yang telah Anda berikan. Untuk bantuan mendesak, silakan hubungi hotline Satgas PPKS di 081355060444."
+
+  utter_report_cancelled:
+    - text: "Proses pelaporan telah dibatalkan. Jika Anda berubah pikiran atau membutuhkan bantuan lain, kami selalu siap membantu. Keselamatan dan kesejahteraan Anda adalah prioritas kami."
+
+  utter_confirm_report:
+    - text: "Berikut adalah ringkasan laporan Anda:\n\n
+            Kategori Pelapor: {reporter_category}\n
+            Nama: {nama_pelapor}\n
+            Program Studi: {program_studi}\n
+            Kelas: {kelas}\n
+            Jenis Kelamin: {jenis_kelamin}\n
+            Nomor Telepon: {nomor_telepon}\n
+            Alamat: {alamat}\n
+            Email: {email}\n
+            Penyandang Disabilitas: {is_disabilitas}\n
+            Jenis Disabilitas: {jenis_disabilitas}\n
+            Jenis Kekerasan: {jenis_kekerasan}\n
+            Deskripsi Kejadian: {deskripsi_kejadian}\n
+            Status Terlapor: {status_terlapor}\n
+            Kontak Konfirmasi: {kontak_konfirmasi}\n\n
+            Apakah semua informasi di atas sudah benar? Ketik 'ya' untuk mengonfirmasi atau 'tidak' untuk mengubah."
+
 actions:
   - action_faq
+  - action_submit_report
+  - validate_report_case_form
 
 session_config:
   session_expiration_time: 60
